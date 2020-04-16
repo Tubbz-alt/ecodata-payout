@@ -12,6 +12,10 @@ cargo build --release --target wasm32-unknown-unknown
 cargo test
 ```
 
+## Generating optimized Wasm bytecode
+
+For generating optimized, deterministic bytecode that is better suited for uploading to a live chain, please see the [Preparing the Wasm bytecode for production](./Developing.md#preparing-the-wasm-bytecode-for-production) section in [./Developing.md](./Developing.md).
+
 ## Uploading to Kontraua
 
 For uploading the code to the Kontraua testnet, you can follow the instructions from the Phase 2 challenge [here](https://github.com/regen-network/testnets/blob/master/kontraua/challenges/phase-2/instructions.md#step---1--upload-your-contract-optional).
