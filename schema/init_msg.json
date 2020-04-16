@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InitMsg",
+  "type": "object",
+  "required": [
+    "beneficiary",
+    "ecostate",
+    "oracle",
+    "region",
+    "total_tokens"
+  ],
+  "properties": {
+    "beneficiary": {
+      "$ref": "#/definitions/HumanAddr"
+    },
+    "ecostate": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "oracle": {
+      "$ref": "#/definitions/HumanAddr"
+    },
+    "region": {
+      "type": "string"
+    },
+    "total_tokens": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "definitions": {
+    "HumanAddr": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EcostateResponse",
+  "type": "object",
+  "required": [
+    "ecostate"
+  ],
+  "properties": {
+    "ecostate": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HandleMsg",
+  "anyOf": [
+    {
+      "type": "object",
+      "required": [
+        "update_ecostate"
+      ],
+      "properties": {
+        "update_ecostate": {
+          "type": "object",
+          "required": [
+            "ecostate"
+          ],
+          "properties": {
+            "ecostate": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "lock"
+      ],
+      "properties": {
+        "lock": {
+          "type": "object"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "unlock"
+      ],
+      "properties": {
+        "unlock": {
+          "type": "object"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "change_beneficiary"
+      ],
+      "properties": {
+        "change_beneficiary": {
+          "type": "object",
+          "required": [
+            "beneficiary"
+          ],
+          "properties": {
+            "beneficiary": {
+              "$ref": "#/definitions/HumanAddr"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "transfer_ownership"
+      ],
+      "properties": {
+        "transfer_ownership": {
+          "type": "object",
+          "required": [
+            "owner"
+          ],
+          "properties": {
+            "owner": {
+              "$ref": "#/definitions/HumanAddr"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "definitions": {
+    "HumanAddr": {
+      "type": "string"
+    }
+  }
+}

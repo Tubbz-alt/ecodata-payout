@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "State",
+  "type": "object",
+  "required": [
+    "beneficiary",
+    "ecostate",
+    "is_locked",
+    "oracle",
+    "owner",
+    "region",
+    "released_tokens",
+    "total_tokens"
+  ],
+  "properties": {
+    "beneficiary": {
+      "$ref": "#/definitions/CanonicalAddr"
+    },
+    "ecostate": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "is_locked": {
+      "type": "boolean"
+    },
+    "oracle": {
+      "$ref": "#/definitions/CanonicalAddr"
+    },
+    "owner": {
+      "$ref": "#/definitions/CanonicalAddr"
+    },
+    "region": {
+      "type": "string"
+    },
+    "released_tokens": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "total_tokens": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "definitions": {
+    "Binary": {
+      "type": "string"
+    },
+    "CanonicalAddr": {
+      "$ref": "#/definitions/Binary"
+    }
+  }
+}
